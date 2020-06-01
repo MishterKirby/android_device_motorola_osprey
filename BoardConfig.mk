@@ -153,7 +153,7 @@ BOARD_SEPOLICY_UNION += \
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
-
+TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
