@@ -1,7 +1,7 @@
 Unified Device Tree for Moto G 2015 (osprey)
 ===========================================
 
-The Motorola Moto G 2015 (codenamed _"osprey"_) is a mid-range smartphone from Motorola mobility.
+The Motorola Moto G 2015 (codenamed _"osprey"_) is a mid-range smartphone from Motorola Mobility.
 It was announced on July 2015.
 
 Basic   | Spec Sheet
