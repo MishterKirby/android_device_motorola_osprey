@@ -23,13 +23,12 @@ DEVICE_PATH := device/motorola/osprey
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := osprey,osprey_umts,osprey_u2,osprey_ud2,osprey_uds,osprey_cdma,osprey_sprint,osprey_udstv
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_osprey
-TARGET_RECOVERY_DEVICE_MODULES := libinit_osprey
-
 # Camera
 BOARD_GLOBAL_CFLAGS += -DCONFIG_MSM_USES_M_STACK
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
+TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
+    /system/bin/mediaserver=23 \
+    /vendor/bin/mm-qcamera-daemon=23
 
 # Kernel
 TARGET_KERNEL_CONFIG := osprey_defconfig
@@ -41,12 +40,6 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16879616 # 16484 * 1024 mmcblk0p32
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2432696320 # 2375680 * 1024 mmcblk0p41
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 8388608   # 8192 * 1024 mmcblk0p29
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 4865261568 # 4751232 * 1024 mmcblk0p42
-
-# Power
-TARGET_POWERHAL_HEADER_PATH := $(DEVICE_PATH)/power
-
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Sensors
 BOARD_USES_STML0XX_SENSOR_HUB := true
